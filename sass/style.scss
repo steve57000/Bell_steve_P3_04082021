@@ -87,6 +87,10 @@ form {
         color: white;
         background: linear-gradient($color_secondary, $color_primary);
         box-shadow: 0 5px 7px 1px $color_box_shadow;
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 7px 5px 3px $color_box_shadow;
+        }
     }
 }
 aside {
@@ -118,7 +122,10 @@ aside {
         justify-content: center;
         align-items: center;
         box-shadow: 0 4px 11px 0px $color_box_shadow;
-        
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 6px 8px 2px $color_box_shadow;
+        }
         svg {
             position: absolute;
             width: 20px;
@@ -176,6 +183,9 @@ article {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 2px 4px 0px $color_box_shadow;
+    &:hover {
+            box-shadow: 1px 4px 5px 2px $color_box_shadow;
+        }
 }
 
 .container_img {
