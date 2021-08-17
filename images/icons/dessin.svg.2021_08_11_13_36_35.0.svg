@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylsheet type="text/css" href="../../css/style.css"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="12.184691mm"
+   height="11.159014mm"
+   viewBox="0 0 12.184691 11.159014"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="dessin.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.1072952"
+     inkscape:cx="-60.985516"
+     inkscape:cy="-0.48273496"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="65"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient6719"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9356dc;stop-opacity:1;"
+         offset="0"
+         id="stop6717" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6149"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ff79da;stop-opacity:1;"
+         offset="0"
+         id="stop6147" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-50.283284,-35.953415)">
+    <path
+       id="rect846"
+       style="stroke-opacity:1;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:0.165;stroke:#000000;fill-rule:evenodd;fill-opacity:1;"
+       d="m 51.45853,36.961658 c -1.3654,1.367017 -1.340701,3.605992 0.05518,5.002064 l 4.946886,4.946886 4.949811,-4.94981 c 1.394519,-1.397476 1.416926,-3.63647 0.05006,-5.002063 -1.365973,-1.364776 -3.518121,-0.234457 -4.914723,1.159188 -1.397677,-1.394326 -3.721822,-2.523344 -5.087213,-1.156268 z"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="1.7881303"
+       inkscape:transform-center-y="1.0039451" />
+  </g>
+</svg>
