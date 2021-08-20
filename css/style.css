@@ -13,6 +13,106 @@ body {
   padding: 0;
 }
 
+.loader {
+  position: fixed;
+  width: 375px;
+  max-width: 428px;
+  height: 100%;
+  background-color: #f6f6f6;
+  animation: loader_end 5s ease-in-out forwards;
+  z-index: 1000;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loader_end 5s ease-in-out forwards;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: "Shrikhand", "cursive";
+  font-size: 20px;
+  color: #99E2D0;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #99E2D0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+
+.ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #9356DC;
+  border-right: 3px solid #FF79DA;
+  border-bottom: 3px solid #9356DC;
+  border-left: 3px solid #99E2D0;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+.span_loader {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  opacity: 1;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.span_loader:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(#ff79da, #9356dc);
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px linear-gradient(#ff79da, #9356dc);
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes loader_end {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.7;
+    visibility: hidden;
+  }
+}
 #container {
   margin: 0;
   padding: 0;
@@ -407,7 +507,7 @@ footer li a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: white;
+  color: #ffffff;
 }
 footer li a p {
   margin: 0;
