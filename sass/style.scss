@@ -197,6 +197,7 @@ section {
         width: 25px;
         right: 40px;
         top: 20px;
+        z-index: 999;
     }
 }
 .choice_menu {
@@ -283,6 +284,7 @@ form {
     justify-content: center;
     svg {
         height: 17px;
+        z-index: 998;
     }
     
     input {

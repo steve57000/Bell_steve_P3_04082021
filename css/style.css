@@ -188,6 +188,7 @@ section h2 {
   width: 25px;
   right: 40px;
   top: 20px;
+  z-index: 999;
 }
 
 .choice_menu {
@@ -276,6 +277,7 @@ form {
 }
 form svg {
   height: 17px;
+  z-index: 998;
 }
 form input {
   width: 41%;
