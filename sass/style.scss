@@ -262,11 +262,11 @@ section {
         color: #ffffff;
         transition-duration: 1.5s;
     }   
-    &:hover > .overflow_text {
+    &:hover > .overflow_text, &:focus > .overflow_text {
         width: 65%;
         cursor: pointer;     
     }
-    &:hover > .check_circle {
+    &:hover > .check_circle, &:focus > .check_circle {
         right: 0;       
         svg {
             transform: rotate(-360deg);

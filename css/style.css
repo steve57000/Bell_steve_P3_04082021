@@ -254,14 +254,14 @@ section h2 {
   color: #ffffff;
   transition-duration: 1.5s;
 }
-.choice_menu:hover > .overflow_text {
+.choice_menu:hover > .overflow_text, .choice_menu:focus > .overflow_text {
   width: 65%;
   cursor: pointer;
 }
-.choice_menu:hover > .check_circle {
+.choice_menu:hover > .check_circle, .choice_menu:focus > .check_circle {
   right: 0;
 }
-.choice_menu:hover > .check_circle svg {
+.choice_menu:hover > .check_circle svg, .choice_menu:focus > .check_circle svg {
   transform: rotate(-360deg);
   transform-origin: center;
 }
