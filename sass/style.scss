@@ -7,8 +7,13 @@ $color_background: #f6f6f6;
 $color_background_bold: #eaeaea;
 $color_box_shadow: #cecece;
 $color_footer: #353535;
+$color_gradient_opacity: linear-gradient(rgba(255,121,218,0.8),rgba(147,86,220,0.8));
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap');
+html {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -20,12 +25,18 @@ body {
 #container {
     margin: 0;
     padding: 0;
-    width: 100%;
-    max-width: 428px;
+    max-width: 375px;
+    height: auto;
+}
+header {
+    position: relative;
 }
 header a {
     position: absolute;
-    top: 30px; left: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
 }
 h1 {
     font-family: 'Shrikhand', 'cursive';
@@ -39,7 +50,7 @@ a {
     color: black;
 }
 .img_large {
-    width: 100%;
+    width: 375px;
 }
 section {
     background-color: $color_background;
@@ -94,17 +105,23 @@ section {
     strong {
         font-weight: bold;
     }
-    p,
+    p {
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+    }
     h3 {
+        font-size: 17px;
         padding: 0;
         margin: 0;
     }
     .overflow_text {
-        width: 77%;
-        height: 100%;
+        width: 85%;
+        height: 65%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+        transition: linear 1s;
     }
     .overflow_text h3,
     .overflow_text p {
@@ -113,27 +130,41 @@ section {
         text-overflow: ellipsis;
     }
     .price {
-        position: relative;
-        width: 23%;
-        text-align: end;
-        padding-right: 10px;;
+        width: 15%;
+        height: 65%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
     }
     .check_circle {
-        width: 23%;
+        width: 15%;
         height: 100%;
         position: absolute;
-        right: -23%;
+        right: -15%;
         background: $color_tertiary;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: linear 1s ;
+    }
+    svg {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 20%;
+        color: #ffffff;
+        transition-duration: 1.5s;
     }   
     &:hover > .overflow_text {
-        width: 50%;
-        cursor: pointer;
+        width: 65%;
+        cursor: pointer;     
     }
     &:hover > .check_circle {
-        right: 0;
+        right: 0;       
+        svg {
+            transform: rotate(-360deg);
+            transform-origin: center;
+        }
     }
 }
 form {
@@ -183,9 +214,22 @@ button {
         color: white;
         background: linear-gradient($color_secondary, $color_primary);
         box-shadow: 0 5px 7px 1px $color_box_shadow;
+        transition: linear 0.2s;
+        transform: scale(1);
+        a {
+            display: inline-block;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
             box-shadow: 2px 7px 5px 3px $color_box_shadow;
+            background: $color_gradient_opacity;
         }
     }
 .button {
@@ -218,8 +262,10 @@ aside {
         justify-content: center;
         align-items: center;
         box-shadow: 0 4px 11px 0px $color_box_shadow;
+        transform: scale(1);
+        transition: linear 0.2s;
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 1px 6px 8px 2px $color_box_shadow;
         }
         svg {
@@ -324,11 +370,12 @@ article {
         position: absolute;
         width: 30px;
         height: 30px;
-        right: 15px;    
+        right: 15px;  
     }
 }
 
 footer {
+    width: 375px;
     height: 198px;
     color: white;
     background: $color_footer;
@@ -360,10 +407,10 @@ footer {
 }
 #footer_restaurant {
     position: relative;
-    top: 1193px;
+    top: 1344px;
 }
 .footer_restaurant {
     position: relative;
-    top: 1110px
+    top: 1241px;
 }
     
