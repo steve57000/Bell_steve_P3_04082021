@@ -92,27 +92,21 @@ body {
   right:-8px;
   box-shadow:0 0 20px linear-gradient(rgb(255,121,218),rgb(147,86,220));
 }
-@keyframes animateC
-{
-  0%
-  {
+@keyframes animateC {
+  0% {
     transform:rotate(0deg);
   }
-  100%
-  {
+  100% {
     transform:rotate(360deg);
   }
 }
-@keyframes animate
-{
-  0%
-  {
-    transform:rotate(45deg);
-  }
-  100%
-  {
-    transform:rotate(405deg);
-  }
+@keyframes animate {
+    0% {
+        transform:rotate(45deg);
+    }
+    100% {
+        transform:rotate(405deg);
+    }
 }
 @keyframes loader_end {
     0% {
@@ -197,7 +191,6 @@ section {
         width: 25px;
         right: 40px;
         top: 20px;
-        z-index: 999;
     }
 }
 .choice_menu {
@@ -261,7 +254,7 @@ section {
         height: 25px;
         left: 20%;
         color: #ffffff;
-        transition-duration: 1.5s;
+        transition: linear 1s;
     }   
     &:hover > .overflow_text, &:focus > .overflow_text {
         width: 65%;
@@ -284,7 +277,6 @@ form {
     justify-content: center;
     svg {
         height: 17px;
-        z-index: 998;
     }
     
     input {
@@ -392,10 +384,7 @@ aside {
 .functioning_card:hover {
     background-color: $color_primary_opacity;   
 }
-.functioning_card:hover > svg {
-        color: $color_primary;
-        opacity: 1;
-}
+
 .functioning_number {
         width: 25px;
         height: 25px;

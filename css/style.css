@@ -188,7 +188,6 @@ section h2 {
   width: 25px;
   right: 40px;
   top: 20px;
-  z-index: 999;
 }
 
 .choice_menu {
@@ -253,7 +252,7 @@ section h2 {
   height: 25px;
   left: 20%;
   color: #ffffff;
-  transition-duration: 1.5s;
+  transition: linear 1s;
 }
 .choice_menu:hover > .overflow_text, .choice_menu:focus > .overflow_text {
   width: 65%;
@@ -277,7 +276,6 @@ form {
 }
 form svg {
   height: 17px;
-  z-index: 998;
 }
 form input {
   width: 41%;
@@ -390,11 +388,6 @@ aside h2 {
 
 .functioning_card:hover {
   background-color: rgba(144, 85, 216, 0.15);
-}
-
-.functioning_card:hover > svg {
-  color: #9356DC;
-  opacity: 1;
 }
 
 .functioning_number {
