@@ -19,7 +19,7 @@ body {
   max-width: 428px;
   height: 100%;
   background-color: #f6f6f6;
-  animation: loader_end 5s ease-in-out forwards;
+  animation: loader_end 3s ease-in-out forwards;
   z-index: 1000;
 }
 
@@ -28,7 +28,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: loader_end 5s ease-in-out forwards;
+  animation: loader_end 3s ease-in-out forwards;
   width: 160px;
   height: 160px;
   background: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
@@ -170,24 +170,34 @@ section h2 {
 .menu h1, .menu h2 {
   font-family: "Shrikhand", "cursive";
   font-size: 26px;
-  padding: 25px 0 0 25px;
+  padding: 25px 0 0 0;
   margin: 0;
 }
 .menu h3 {
   font-weight: 400;
   font-size: 20px;
-  padding-left: 25px;
-  margin: 20px 0 20px 0;
+  padding-left: 10px;
+  margin: 25px 0 20px 0;
 }
 .menu h3 span {
   text-decoration: 3px underline #99E2D0;
   text-underline-offset: 0.7rem;
 }
-.menu svg {
+
+.menu_header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0 0 10px;
+}
+.menu_header input {
   position: absolute;
-  width: 25px;
-  right: 40px;
-  top: 20px;
+  left: -9999px;
+}
+.menu_header .custom-checkbox input[type=checkbox]:checked ~ .checked {
+  position: absolute;
+  right: 27px;
 }
 
 .choice_menu {
@@ -289,7 +299,8 @@ form input {
   width: 100%;
   position: absolute;
   top: 0;
-  border-bottom: 2px solid #cecece;
+  opacity: 0.5;
+  border-bottom: 2px solid rgba(206, 206, 206, 0.7);
   box-shadow: 0px 2px 4px 0px #cecece;
 }
 
@@ -389,6 +400,10 @@ aside h2 {
 .functioning_card:hover {
   background-color: rgba(144, 85, 216, 0.15);
 }
+.functioning_card:hover:hover > svg {
+  opacity: 1;
+  color: #9356DC;
+}
 
 .functioning_number {
   width: 25px;
@@ -418,11 +433,16 @@ aside h2 {
 }
 
 #resto_group_card {
+  position: relative;
   width: 336px;
   height: 1062px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+#resto_group_card input {
+  position: absolute;
+  left: -9999px;
 }
 
 article {
@@ -462,23 +482,42 @@ article:hover {
   border-radius: 2px;
 }
 
+.fa-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fancy-checkbox input[type=checkbox], .custom-checkbox .checked {
+  display: none;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .resto_footer_card {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 30%;
+  padding: 0 10px 0 0;
+}
+
+.resto_footer_text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
 }
-.resto_footer_card h3, .resto_footer_card p {
+.resto_footer_text h3, .resto_footer_text p {
   margin: 0;
+  text-align: left;
   padding: 0 0 0 10px;
-}
-.resto_footer_card svg {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  right: 15px;
 }
 
 footer {
@@ -515,12 +554,12 @@ footer li svg {
 
 #footer_restaurant {
   position: relative;
-  top: 1344px;
+  top: 1360px;
 }
 
 .footer_restaurant {
   position: relative;
-  top: 1241px;
+  top: 1250px;
 }
 
 /*# sourceMappingURL=style.css.map */

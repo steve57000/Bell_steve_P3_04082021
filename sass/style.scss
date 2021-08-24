@@ -27,7 +27,7 @@ body {
     max-width: 428px;
     height: 100%;
     background-color: #f6f6f6;
-    animation: loader_end 5s ease-in-out forwards;
+    animation: loader_end 3s ease-in-out forwards;
     z-index: 1000;
 }
 .ring
@@ -36,7 +36,7 @@ body {
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  animation: loader_end 5s ease-in-out forwards;
+  animation: loader_end 3s ease-in-out forwards;
   width:160px;
   height:160px;
   background: linear-gradient(rgba(255,121,218,0.8),rgba(147,86,220,0.8));  
@@ -173,24 +173,34 @@ section {
     h1, h2 {
         font-family: 'Shrikhand', 'cursive';
         font-size: 26px;
-        padding: 25px 0 0 25px;
+        padding: 25px 0 0 0;
         margin: 0;
     }
     h3 {
         font-weight: 400;
         font-size: 20px;
-        padding-left: 25px;
-        margin: 20px 0 20px 0;
+        padding-left: 10px;
+        margin: 25px 0 20px 0;
         span {
             text-decoration: 3px underline $color_tertiary;
             text-underline-offset: 0.7rem;
         }
     }
-    svg {
+    
+}
+.menu_header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 0 10px;
+    input {
         position: absolute;
-        width: 25px;
-        right: 40px;
-        top: 20px;
+        left: -9999px;
+    }
+    .custom-checkbox input[type="checkbox"]:checked~.checked {
+        position: absolute;
+        right: 27px;
     }
 }
 .choice_menu {
@@ -291,7 +301,8 @@ form {
         width: 100%;
         position: absolute;
         top: 0;
-        border-bottom: 2px solid $color_box_shadow;
+        opacity: 0.5;
+        border-bottom: 2px solid rgba(206, 206, 206,0.7);
         box-shadow: 0px 2px 4px 0px $color_box_shadow;
 }
 #explore_restaurants {
@@ -374,7 +385,7 @@ aside {
             width: 20px;
             height: 20px;
             opacity: 0.43;
-            left: 40px;
+            left: 40px;         
         }
         h3 {
         margin: 0;
@@ -382,7 +393,11 @@ aside {
         }
 }
 .functioning_card:hover {
-    background-color: $color_primary_opacity;   
+    background-color: $color_primary_opacity;
+    &:hover > svg {
+        opacity: 1;
+        color: $color_primary;
+    }  
 }
 
 .functioning_number {
@@ -411,11 +426,16 @@ aside {
     }
 }
 #resto_group_card {
+    position: relative;
     width: 336px;
     height: 1062px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    input {
+        position: absolute;
+        left: -9999px;
+    }
 }
 article {
     width: 100%;
@@ -453,24 +473,43 @@ article {
         border-radius: 2px;
     }
 }
+
+.fa-gradient   {
+        background: -webkit-gradient(linear, left top, left bottom, from($color_primary), to($color_secondary));
+        background-clip: text;
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+.fancy-checkbox input[type="checkbox"], .custom-checkbox .checked {
+    display: none;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:checked~.checked {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 .resto_footer_card {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 30%;
+    padding: 0 10px 0 0; 
+}
+.resto_footer_text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    h3, p{
+    h3, p {
         margin: 0;
+        text-align: left;
         padding: 0 0 0 10px;
     }
-    svg {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        right: 15px;  
-    }
 }
+
 
 footer {
     width: 375px;
@@ -505,10 +544,10 @@ footer {
 }
 #footer_restaurant {
     position: relative;
-    top: 1344px;
+    top: 1360px;
 }
 .footer_restaurant {
     position: relative;
-    top: 1241px;
+    top: 1250px;
 }
     
