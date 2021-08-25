@@ -291,42 +291,9 @@ section h2 {
 
 .fadein {
   animation: fadein 3s;
-  -moz-animation: fadein 3s;
-  -webkit-animation: fadein 3s;
-  -o-animation: fadein 3s;
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-o-keyframes fadein {
   from {
     opacity: 0;
     transform: translateY(-40px);
