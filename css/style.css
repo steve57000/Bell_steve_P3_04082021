@@ -167,10 +167,10 @@ section h2 {
   top: 260px;
   border-radius: 40px 40px 0 0;
 }
-.menu h1, .menu h2 {
+.menu h2 {
   font-family: "Shrikhand", "cursive";
-  font-size: 26px;
-  padding: 25px 0 0 0;
+  font-size: 24px;
+  padding: 0 0 0 10px;
   margin: 0;
 }
 .menu h3 {
@@ -197,16 +197,12 @@ section h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 20px;
-}
-.menu_header h2 {
-  margin: 0;
-  padding: 0 0 0 10px;
+  padding-top: 35px;
 }
 .menu_header label {
   position: absolute;
   top: 0px;
-  padding: 0 10px 0 0;
+  padding: 35px 10px 0 0;
 }
 .menu_header input {
   position: absolute;
@@ -621,12 +617,12 @@ footer li svg {
 
 #footer_restaurant {
   position: relative;
-  top: 1360px;
+  top: 1385px;
 }
 
 .footer_restaurant {
   position: relative;
-  top: 1250px;
+  top: 1282px;
 }
 
 /*# sourceMappingURL=style.css.map */
