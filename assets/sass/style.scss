@@ -1,4 +1,4 @@
-/* ./dart-sass/sass sass/style.scss css/style.css --watch */
+/* ./assets/dart-sass/sass ./assets/sass/style.scss ./assets/css/style.css --watch */
 $color_primary: #9356DC;
 $color_primary_opacity: rgba(144, 85, 216, 0.15);
 $color_secondary: #FF79DA;
@@ -10,6 +10,7 @@ $color_footer: #353535;
 $color_gradient_opacity: linear-gradient(rgba(255,121,218,0.8),rgba(147,86,220,0.8));
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap');
+
 html {
     margin: 0;
     padding: 0;
@@ -20,6 +21,23 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;    
+}
+#container {
+    margin: 0;
+    padding: 0;
+    max-width: 428px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    @media (min-width: 768px) {
+        max-width: 1024px;
+    }
+    @media (min-width: 1025px) {
+        max-width: 1280px;
+    }
+}
+main {
+    width: 100%;
 }
 .loader {
     position: fixed;
@@ -41,8 +59,7 @@ body {
   background: linear-gradient(rgba(255,121,218,0.8),rgba(147,86,220,0.8));  
   border-radius:50%;
   text-align:center;
-  line-height:150px;
-  font-family: 'Shrikhand', 'cursive';
+  line-height:150px; 
   font-size:20px;
   color:$color_tertiary;
   letter-spacing:4px;
@@ -120,20 +137,6 @@ body {
     }
 }
 
-
-
-#container {
-    margin: 0;
-    padding: 0;
-    max-width: 428px;
-    width: 375px;
-    height: auto;
-    margin: 0 auto 0 auto;
-    @media (min-width: 768px) {
-        max-width: 768px;
-        width: 100%;
-    }
-}
 header {
     width: 100%;
     position: relative;
@@ -159,8 +162,40 @@ a {
     text-decoration: none;
     color: black;
 }
+.bg_image_note_enchantee {
+    background:  no-repeat  url('../images/restaurants/enchante.jpg');
+    @media (min-width: 768px) {
+        background: no-repeat  url('../images/restaurants/enchante_medium.jpg');
+    }
+}
+.bg_image_palette_gout {
+    background:  no-repeat  url('../images/restaurants/palette.jpg');
+    @media (min-width: 768px) {
+        background: no-repeat  url('../images/restaurants/palette_medium.jpg');
+    }
+}
+.bg_image_delices_sens {
+    background:  no-repeat  url('../images/restaurants/delice.jpg');
+    @media (min-width: 768px) {
+        background: no-repeat  url('../images/restaurants/delice_medium.jpg');
+    }
+}
+.bg_image_francaise {
+    background:  no-repeat  url('../images/restaurants/francaise.jpg');
+    @media (min-width: 768px) {
+        background: no-repeat  url('../images/restaurants/francaise_medium.jpg');
+    }
+}
 .img_large {
     width: 100%;
+    height: 250px;
+    background-size: cover;
+    @media (min-width: 768px) {
+        height: 500px;
+    }
+    @media (min-width: 1025px) {
+        height: 700px;
+    }
 }
 .row {
     width: 100%;
@@ -174,21 +209,16 @@ section {
     }       
 }
 .menu {
-    min-width: 100%;
-    position: absolute;
     display: flex;
     flex-direction: column;
-    width: 375px;
-    top: 260px;
+    width: 100%;
+    margin: -35px 0 0 0;
     border-radius: 40px 40px 0 0;
     h2 {
         font-family: 'Shrikhand', 'cursive';
         font-size: 24px;
         padding: 0 0 0 15px;
         margin: 0;
-    }
-    @media (min-width: 768px) {
-        top: 550px;
     }
 }
 .menu_header {
@@ -228,9 +258,8 @@ section {
         width: 42px;
         bottom: 5px;
         left: 16px;
-        border: 2px solid $color_tertiary;
         text-decoration: underline;       
-        background-color: $color_tertiary;
+        border-top: 2px solid $color_tertiary;
     }
     @media (min-width: 768px) {
         display: flex;
@@ -246,6 +275,9 @@ section {
         width: 50%;
         display: flex;
         flex-direction: column;
+    }
+    @media (min-width: 1025px) {
+        width: 32%;
     }
 }
 .choice_menu {
@@ -499,10 +531,10 @@ aside {
 }
 #restaurant {
     width: 100%;
-    height: 1233px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 60px;
     h2 {
         width: 90%;
         text-align: left;
@@ -549,6 +581,9 @@ article {
     @media (min-width: 768px) {
         width: 48%;
     }
+    @media (min-width: 1025px) {
+        width: 32%;
+    }
 }
 label {
     position: absolute;
@@ -561,9 +596,10 @@ label {
     overflow: hidden;
     border-radius: 15px 15px 0 0;
     display: flex;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
     img {
-        width: 100%; 
+        width: 100%;
     }
     p {
         width: 80px;
@@ -644,20 +680,5 @@ footer {
         }
     }
 }
-#footer_restaurant {
-    position: relative;
-    min-width: 100%;
-    top: 1220px;
-    @media (min-width: 768px) {
-        top: 1034px;
-    }
-}
-.footer_restaurant {
-    min-width: 100%;
-    position: relative;
-    top: 1123px;
-    @media (min-width: 768px) {
-        top: 928px;;
-    }
-}
+
     
