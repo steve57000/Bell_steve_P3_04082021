@@ -16,15 +16,14 @@ html {
     padding: 0;
 }
 body {
+    
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 0 auto 0 auto;
     padding: 0;    
 }
 #container {
-    margin: 0;
-    padding: 0;
     max-width: 428px;
     width: 100%;
     height: auto;
@@ -39,6 +38,7 @@ body {
 main {
     width: 100%;
 }
+
 .loader {
     position: fixed;
     width: 100%;
@@ -46,12 +46,19 @@ main {
     background-color: #f6f6f6;
     animation: loader_end 3s ease-in-out forwards;
     z-index: 1000;
+    @media (min-width: 768px) {
+        max-width: 1024px;
+    }
+    @media (min-width: 1025px) {
+        max-width: 1280px;
+    }
 }
 .ring
 {
   position:absolute;
   top:50%;
   left:50%;
+  display: flex;
   transform:translate(-50%,-50%);
   animation: loader_end 3s ease-in-out forwards;
   width:160px;
@@ -61,6 +68,7 @@ main {
   text-align:center;
   line-height:150px; 
   font-size:20px;
+  font-family: 'Shrikhand';
   color:$color_tertiary;
   letter-spacing:4px;
   text-transform:uppercase;
@@ -459,7 +467,14 @@ aside {
         h2 {
             width: 92%;
         }
-    } 
+    }
+    @media (min-width: 1025px) {
+        height: 280px;
+        h2 {
+            width: 98%;
+            padding: 0 0 0 2px;
+        }
+    }  
 }
 #functioning_group_card {
     width: 100%;
@@ -474,6 +489,10 @@ aside {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+    @media (min-width: 1025px) {
+        width: 96%;
+        height: 63%;
     }  
 }
 .functioning_card {
@@ -506,6 +525,9 @@ aside {
         @media (min-width: 768px) {
             width: 45%;           
         }
+        @media (min-width: 1025px) {
+            width: 30%;
+    } 
 }
 .functioning_card:hover {
     background-color: $color_primary_opacity;
@@ -547,6 +569,11 @@ aside {
             margin: 30px 0 20px 0;
         }
     }
+    @media (min-width: 1025px) {
+        h2 {
+            width: 98%;
+        }
+    } 
 }
 #resto_group_card {
     position: relative;
@@ -567,6 +594,9 @@ aside {
         flex-direction: row;
         flex-wrap: wrap;
     }
+    @media (min-width: 1025px) {
+        width: 98%;
+    } 
 }
 article {
     position: relative;
