@@ -1,39 +1,8 @@
-/* ./assets/dart-sass/sass ./assets/sass/style.scss ./assets/css/style.css --watch */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap");
-html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 0 auto;
-  padding: 0;
-}
-
-#container {
-  max-width: 428px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 0 auto;
-}
-@media (min-width: 768px) {
-  #container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1025px) {
-  #container {
-    max-width: 1280px;
-  }
-}
-
-main {
-  width: 100%;
-}
-
+@charset "UTF-8";
+/* Sass n'est pas installé, il est compilé directement dans le projet avec dart-sass
+    La ligne suivante est à entrer dans le Terminal :
+    ./assets/dart-sass/sass ./assets/sass/style.scss ./assets/css/style.css --watch 
+*/
 .loader {
   position: fixed;
   width: 100%;
@@ -144,6 +113,48 @@ main {
     visibility: hidden;
   }
 }
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(../fonts/roboto/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/shrikhand/Shrikhand-Regular.ttf);
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto-Light", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+#container {
+  max-width: 428px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+@media (min-width: 768px) {
+  #container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1025px) {
+  #container {
+    max-width: 1280px;
+  }
+}
+
+main {
+  width: 100%;
+}
+
 header {
   width: 100%;
   position: relative;
@@ -236,7 +247,7 @@ section {
   text-align: center;
 }
 section h2 {
-  font-weight: bold;
+  /*font-weight: bold;*/
   margin: 0;
 }
 
@@ -425,14 +436,32 @@ form {
   justify-content: center;
 }
 form svg {
-  height: 17px;
+  width: 5%;
+  height: 30%;
+}
+@media (min-width: 768px) {
+  form svg {
+    margin-left: -40px;
+  }
 }
 form input {
   width: 41%;
+  height: auto;
   background-color: #eaeaea;
   font: 400 17px "Roboto", sans-serif;
   border-style: none;
+  outline-style: none;
   text-align: center;
+}
+@media (min-width: 768px) {
+  form input {
+    width: 17%;
+  }
+}
+@media (min-width: 1025px) {
+  form input {
+    width: 10%;
+  }
 }
 
 #border {
