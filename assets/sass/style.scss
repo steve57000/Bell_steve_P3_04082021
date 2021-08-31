@@ -12,6 +12,9 @@ html {
     margin: 0;
     padding: 0;
 }
+h2, h3, h4, input, button, strong {
+    font-family: 'Roboto-Medium', sans-serif;
+}
 body {    
     font-family: 'Roboto-Light', sans-serif;
     display: flex;
@@ -101,7 +104,6 @@ section {
     background-color: $color_background;
     text-align: center;   
     h2 {
-        /*font-weight: bold;*/
         margin: 0;
     }       
 }
@@ -143,7 +145,6 @@ section {
     width: 100%;
     h3 {
         position: relative;
-        font-weight: 400;
         font-size: 20px;
         padding-left: 15px;
         margin: 25px 0 10px 0;
@@ -187,15 +188,9 @@ section {
     align-items: center;
     text-align: start;
     padding-left: 10px;
-    strong {
-        font-weight: bold;
-    }
     p, h4 {
         padding: 0;
         margin: 0;
-    }
-    h4 {
-        font-family: 'Roboto-Medium';
     }
     .overflow_text {
         width: 85%;
@@ -286,7 +281,7 @@ form {
         width: 41%;
         height: auto;
         background-color: $color_background_bold;
-        font: 400 17px 'Roboto', sans-serif;
+        font-size: 17px;
         border-style: none;
         outline-style: none;
         text-align: center;
@@ -322,7 +317,7 @@ form {
 button {
         width: 219px;
         height: 50px;
-        font: 400 16.3333px 'Roboto', sans-serif;
+        font-size: 16.3333px;
         border: none;
         border-radius: 25px;
         color: white;
@@ -502,9 +497,9 @@ article {
     height: 253px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0px 2px 4px 0px $color_box_shadow;
+    box-shadow: -2px 2px 4px 0px $color_box_shadow;
     &:hover {
-        box-shadow: 1px 4px 5px 2px $color_box_shadow;
+        box-shadow: -3px 3px 4px 0px $color_box_shadow;
     }
     @media (min-width: 768px) {
         width: 48%;
