@@ -190,15 +190,12 @@ section {
     strong {
         font-weight: bold;
     }
-    p {
+    p, h4 {
         padding: 0;
         margin: 0;
-        font-size: 15px;
     }
     h4 {
-        font-size: 17px;
-        padding: 0;
-        margin: 0;
+        font-family: 'Roboto-Medium';
     }
     .overflow_text {
         width: 85%;
