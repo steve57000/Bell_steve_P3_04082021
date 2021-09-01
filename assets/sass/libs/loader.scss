@@ -22,34 +22,32 @@
   animation: loader_end 3s ease-in-out forwards;
   width:160px;
   height:160px;
-  background: linear-gradient(rgba(255,121,218,0.8),rgba(147,86,220,0.8));  
-  border-radius:50%;
-  text-align:center;
-  line-height:150px; 
-  font-size:20px;
-  font-family: 'Shrikhand';
-  color:$color_tertiary;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  text-shadow:0 0 10px $color_tertiary;
-  box-shadow:0 0 20px rgba(0,0,0,0.5);
+  background: linear-gradient($color_secondary, $color_primary);  
+  border-radius:50%;     
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
   z-index: 1001;
-}
-.ring:before
-{
-  content:'';
-  position:absolute;
-  top:-3px;
-  left:-3px;
-  width:100%;
-  height:100%;
-  border:3px solid transparent;
-  border-top:3px solid $color_primary;
-  border-right:3px solid $color_secondary;
-  border-bottom: 3px solid $color_primary;
-  border-left: 3px solid $color_tertiary;
-  border-radius:50%;
-  animation:animateC 2s linear infinite;
+  p {
+    letter-spacing: 2px;
+    font-size: 26px;
+    text-align: center;
+    font-family: 'Shrikhand';
+    color: white;
+    text-shadow: 0 0 10px white;
+    line-height: 110px;
+    padding: 0 0 0 3px;
+  }
+  &:before{
+    content:'';
+    position:absolute;
+    top:-3px;
+    left:-4px;
+    width:100%;
+    height:100%;
+    border:3px solid $color_tertiary;
+    border-bottom: 3px solid transparent;
+    border-radius:50%;
+    animation:animateC 2s linear infinite;
+  }
 }
 .span_loader
 {
@@ -62,18 +60,17 @@
   opacity: 1;
   transform-origin:left;
   animation:animate 2s linear infinite;
-}
-.span_loader:before
-{
-  content:'';
-  position:absolute;
-  width:16px;
-  height:16px;
-  border-radius:50%;
-  background:linear-gradient(rgb(255,121,218),rgb(147,86,220));
-  top:-6px;
-  right:-8px;
-  box-shadow:0 0 20px #cecece;
+  &:before{
+    content:'';
+    position:absolute;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:linear-gradient(rgb(255,121,218),rgb(147,86,220));
+    top:-6px;
+    right:-8px;
+    box-shadow:0 0 20px $color_box_shadow;
+  }
 }
 @keyframes animateC {
   0% {
