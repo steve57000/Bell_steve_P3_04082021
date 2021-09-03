@@ -749,6 +749,7 @@ label {
   position: absolute;
   right: 0;
   animation: hearth 3s;
+  transform: scale(1.03);
   cursor: pointer;
 }
 
