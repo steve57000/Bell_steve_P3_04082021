@@ -536,21 +536,27 @@ label {
     }
 }
 .custom-checkbox img {
-    width: 30px;
+    width: 30px;     
 }
 .fancy-checkbox input[type="checkbox"], .custom-checkbox .checked {
     display: none;
     cursor: pointer;
 }
-
 .custom-checkbox input[type="checkbox"]:checked~.checked {
     display: inline-block;
     position: absolute;
-    right: 0;
-    transform: scale(1.1);
-    cursor: pointer;
+    right: 0;  
+    animation: hearth 3s;   
+    cursor: pointer;    
 }
-
+@keyframes hearth {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .resto_footer_card {
     display: flex;
     align-items: center;
