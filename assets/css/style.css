@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* Sass n'est pas installé, il est compilé directement dans le projet avec dart-sass
+/*  Sass n'est pas installé sur ma machine, il est compilé directement dans le projet,
+    avec le dossier dart-sass
     La ligne suivante est à entrer dans le Terminal :
     ./assets/dart-sass/sass ./assets/sass/style.scss ./assets/css/style.css --watch 
 */
@@ -109,6 +110,10 @@
     opacity: 0.7;
     visibility: hidden;
   }
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url(../fonts/roboto/Roboto-Light.ttf);
 }
 @font-face {
   font-family: "Roboto-Light";
@@ -321,6 +326,10 @@ section h2 {
 
 .flat {
   width: 100%;
+}
+.flat h3 {
+  font-family: "Roboto-Thin", sans-serif;
+  font-weight: 100;
 }
 @media (min-width: 768px) {
   .flat {
@@ -689,7 +698,7 @@ article {
   box-shadow: -2px 2px 4px 0px #cecece;
 }
 article:hover {
-  box-shadow: -3px 3px 4px 0px #cecece;
+  box-shadow: 0px 5px 9px 2px #cecece;
 }
 @media (min-width: 768px) {
   article {
